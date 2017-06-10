@@ -24,7 +24,10 @@ class QuestionController extends Controller
     	$this->validate(request(),[
     		'question'=>'required'
     	]);
-    	Question::create(['question'=>request('question')]);
+    	Question::create([
+    		'question'=>request('question'),
+    		'user_id'=>auth()->id()
+    	]);
 
     	return redirect('/question/create');
     }

@@ -9,7 +9,7 @@
     @foreach($questions as $question)
     <div>
         <div class="panel-body">
-            {{ $question->question }}
+            {{ $question->question }} <a href="/question/{{$question->id}}/edit" style="float: right;">View Answers</a>
         </div>
     </div>
     @endforeach
