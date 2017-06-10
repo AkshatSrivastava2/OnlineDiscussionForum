@@ -9,6 +9,12 @@ use App\Question;
 class QuestionController extends Controller
 {
     //
+    public function index()
+    {
+    	$questions=Question::all();
+
+    	return view('question.index',compact('questions'));
+    }
     public function create()
     {
     	return view('question.create');
@@ -20,6 +26,6 @@ class QuestionController extends Controller
     	]);
     	Question::create(['question'=>request('question')]);
 
-    	return redirect('/post/create');
+    	return redirect('/question/create');
     }
 }
