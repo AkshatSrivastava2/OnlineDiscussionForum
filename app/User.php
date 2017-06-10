@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Question;
+use App\Reply;
 
 class User extends Authenticatable
 {
@@ -30,5 +31,9 @@ class User extends Authenticatable
     public function question()
     {
         return $this->hasMany(Question::class);
+    }
+    public function reply()
+    {
+        return $this->hasMany(Reply::class);
     }
 }

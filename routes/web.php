@@ -24,3 +24,7 @@ Route::get('/question/create','QuestionController@create');
 Route::post('/question','QuestionController@store');
 
 Route::get('/question/show','QuestionController@index');
+
+Route::get('/question/{id}/reply/create','ReplyController@create');
+
+Route::post('reply','ReplyController@store');
