@@ -10,7 +10,7 @@
             {{ $question->question }}
         </div>
     </div>
-    <form method="POST" action="/reply">
+    <form method="POST" action="/question/{{$question->id}}/reply">
     	{{ csrf_field() }}
     	<div class="form-group">
         <label for="reply">Post a Reply Here:</label>

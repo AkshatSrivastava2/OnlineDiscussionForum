@@ -9,7 +9,7 @@
     @foreach($questions as $question)
     <div>
         <div class="panel-body">
-            {{ $question->question }} Posted : {{$question->created_at->diffForHumans()}}  <a href="/question/{{$question->id}}/reply/create" style="float: right;">View Answers</a>
+            {{ $question->question }} Posted : {{$question->created_at->diffForHumans()}}  <a href="/question/{{$question->id}}" style="float: right;">View Answers</a>
         </div>
     </div>
     @endforeach

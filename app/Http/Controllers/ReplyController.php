@@ -19,6 +19,7 @@ class ReplyController extends Controller
     	$this->validate(request(),[
     		'reply'=>'required'
     	]);
+        $question->addReply(request('reply'));
     	return back();
     }
 }

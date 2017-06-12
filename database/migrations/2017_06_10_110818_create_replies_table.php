@@ -17,7 +17,6 @@ class CreateRepliesTable extends Migration
             $table->increments('id');
             $table->text('reply');
             $table->integer('question_id');
-            $table->integer('user_id');
             $table->timestamps();
         });
     }
