@@ -20,5 +20,26 @@
         <button type="submit" class="btn btn-primary">Publish Your Reply</button>
         @include('layouts.error')
     </form>
+    <div>
+    <hr>
+    <div class="panel panel-info">
+    <div class="panel-heading">
+        Your Posted Reply are :
+    </div>
+        <div class="panel-body">
+            @foreach($question->reply as $reply)
+        <article>
+
+            <strong>
+                {{$reply->created_at->diffForHumans()}}:  
+            </strong>
+            
+            {{ $reply->reply}} <hr>
+
+        </article>
+        @endforeach
+        </div>
+    </div>
+    </div>
 </div>
 @endsection
