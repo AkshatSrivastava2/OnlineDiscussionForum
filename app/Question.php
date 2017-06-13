@@ -3,13 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 use App\User;
 use App\Reply;
 
 class Question extends Model
 {
     //
+    use Searchable;
+
     protected $fillable=['question','user_id'];
+    
     public function user()
     {
     	return $this->belongsTo(User::class);
