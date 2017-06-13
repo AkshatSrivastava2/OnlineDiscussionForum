@@ -9,7 +9,7 @@ use App\User;
 class Reply extends Model
 {
     //
-    protected $fillable=['reply','question_id'];
+    protected $fillable=['reply','question_id','user_id'];
     public function question()
     {
     	return $this->belongsTo(Post::class);

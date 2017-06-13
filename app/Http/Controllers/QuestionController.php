@@ -9,6 +9,10 @@ use App\Question;
 class QuestionController extends Controller
 {
     //
+    public function __construct()
+    {
+        return $this->middleware('auth')->except(['index']);
+    }
     public function index()
     {
     	$questions=Question::all();

@@ -28,3 +28,5 @@ Route::get('/question/show','QuestionController@index');
 Route::get('/question/{id}','ReplyController@create');
 
 Route::post('/question/{question}/reply','ReplyController@store');
+
+Route::get('/logout','HomeController@destroy');

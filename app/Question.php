@@ -18,8 +18,8 @@ class Question extends Model
     {
     	return $this->hasMany(Reply::class);
     }
-    public function addReply($reply)
+    public function addReply($reply,$user_id)
     {
-        $this->reply()->create(compact('reply'));
+        $this->reply()->create(compact('reply','user_id'));
     }
 }

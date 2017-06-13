@@ -9,6 +9,10 @@ use App\Question;
 class ReplyController extends Controller
 {
     //
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     public function create($id)
     {
     	$question=Question::find($id);
@@ -19,7 +23,8 @@ class ReplyController extends Controller
     	$this->validate(request(),[
     		'reply'=>'required'
     	]);
-        $question->addReply(request('reply'));
+        $user_id=auth()->id();
+        $question->addReply(request('reply'),$user_id);
     	return back();
     }
 }

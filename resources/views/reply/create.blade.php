@@ -1,4 +1,4 @@
-	@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <div class="container">
@@ -18,7 +18,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Publish Your Reply</button>
-        @include('layouts.error')
+        `@include('layouts.error')
     </form>
     <div>
     <hr>
@@ -34,8 +34,14 @@
                 {{$reply->created_at->diffForHumans()}}:  
             </strong>
             
-            {{ $reply->reply}} <hr>
-
+            {{ $reply->reply}} 
+            <div style="float: right;">
+                <strong>
+                    Answered By : 
+                </strong>
+                {{ $reply->user->name }}
+            </div>
+            <hr>
         </article>
         @endforeach
         </div>
