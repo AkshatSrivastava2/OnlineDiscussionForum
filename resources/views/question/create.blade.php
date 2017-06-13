@@ -13,5 +13,5 @@
         <button type="submit" class="btn btn-primary">Publish Your Question</button>
         @include('layouts.error')
     </form>
-</div>
+    <div>
 @endsection

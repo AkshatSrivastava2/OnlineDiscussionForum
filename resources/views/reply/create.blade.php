@@ -22,6 +22,8 @@
     </form>
     <div>
     <hr>
+    @if($count>0)
+
     <div class="panel panel-info">
     <div class="panel-heading">
         Your Posted Reply are :
@@ -47,5 +49,6 @@
         </div>
     </div>
     </div>
+    @endif
 </div>
 @endsection

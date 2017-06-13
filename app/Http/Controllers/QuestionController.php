@@ -33,6 +33,6 @@ class QuestionController extends Controller
     		'user_id'=>auth()->id()
     	]);
 
-    	return redirect('/question/create');
+    	return redirect('/home');
     }
 }

@@ -16,15 +16,21 @@ class ReplyController extends Controller
     public function create($id)
     {
     	$question=Question::find($id);
-    	return view('reply.create',compact('question')); 
+
+        $count=Reply::where('question_id',$id)->count();
+
+    	return view('reply.create',compact('question','count')); 
     }
     public function store(Question $question)
     {
     	$this->validate(request(),[
     		'reply'=>'required'
     	]);
+
         $user_id=auth()->id();
+
         $question->addReply(request('reply'),$user_id);
+
     	return back();
     }
 }

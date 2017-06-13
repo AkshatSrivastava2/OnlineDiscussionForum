@@ -71,7 +71,7 @@
                     @if (Auth::check())
                         <a href="{{ url('/question/create') }}">Post a Question</a>
                         <a href="{{ url('/question/show') }}">View all Questions</a>
-                        
+                        <a href="/logout"> Logout </a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
