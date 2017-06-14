@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/question/search/{query}',function($query)
+{
+	return \App\Question::search($query)->get();
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

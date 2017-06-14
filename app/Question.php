@@ -26,8 +26,4 @@ class Question extends Model
     {
         $this->reply()->create(compact('reply','user_id'));
     }
-    public function searchableAs()
-    {
-        return 'questions_index';
-    }
 }
