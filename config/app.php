@@ -140,10 +140,6 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        array(
-            // ...
-            'Netshell\Paypal\PaypalServiceProvider',
-        ),
 
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -167,13 +163,15 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -232,10 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        array(
-             // ...
-            'Paypal' => 'Netshell\Paypal\Facades\Paypal',
-        ),   
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

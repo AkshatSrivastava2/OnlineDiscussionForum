@@ -35,3 +35,7 @@ Route::get('/question/{id}','ReplyController@create');
 Route::post('/question/{question}/reply','ReplyController@store');
 
 Route::get('/logout','HomeController@destroy');
+
+Route::get('auth/{social}', 'Auth\LoginController@redirectToProvider');
+
+Route::get('auth/{social}/callback', 'Auth\LoginController@handleProviderCallback');

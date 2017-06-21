@@ -11,6 +11,7 @@
         "guzzlehttp/guzzle": "~5.2",
         "laravel/framework": "5.4.*",
         "laravel/scout": "^3.0",
+        "laravel/socialite": "^2.0",
         "laravel/tinker": "~1.0",
         "netshell/paypal": "dev-master",
         "paypal/rest-api-sdk-php": "*",
