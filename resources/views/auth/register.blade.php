@@ -10,6 +10,9 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
+                        <a href="/auth/facebook" class="fa fa-facebook" style=" padding: 20px;font-size: 30px;width: 30px;text-align: center;text-decoration: none;border-radius: 50%;"></a>
+                        <a href="/auth/google" class="fa fa-google" style=" padding: 20px;font-size: 30px;width: 30px;text-align: center;text-decoration: none;border-radius: 50%;"></a>
+
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 

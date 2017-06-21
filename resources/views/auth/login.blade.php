@@ -10,6 +10,9 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
+                        <a href="/auth/facebook" class="fa fa-facebook" style=" padding: 20px;font-size: 30px;width: 30px;text-align: center;text-decoration: none;border-radius: 50%;"></a>
+                        <a href="/auth/google" class="fa fa-google" style=" padding: 20px;font-size: 30px;width: 30px;text-align: center;text-decoration: none;border-radius: 50%;"></a>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
